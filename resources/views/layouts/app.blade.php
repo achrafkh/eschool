@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
     @include('layouts.partials.header')
-
     <body>
         @include('partials.header')
         @yield('content')

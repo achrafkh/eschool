@@ -12,9 +12,7 @@
                 <ul>
                 @foreach($categories as $cat)
                     <li class="checkbox">
-                        <label><a href="/mycourses/{{ $cat->id }}"> {{ $cat->title }} <span class="pull-right">
-                        {{ $cat->courses->count() }}
-                        </span></a>
+                        <label><a href="/mycourses/{{ $cat->id }}"> {{ $cat->title }} </a>
                     </li>
                 @endforeach
                 </ul>
@@ -23,6 +21,7 @@
     </div>
     <div class="col-sm-8">
         <div class="courses">
+        @if($courses->count())
             @foreach($courses as $course)
             <div class="course row" data-scroll-reveal>
                 <div class="col-sm-4">
@@ -53,6 +52,12 @@
                 </div>
             </div>
             @endforeach
+        @else 
+        <div class="alert alert-warning">
+            You have no courses
+         </div>
+
+        @endif
         </div>
     </div>
 </div>

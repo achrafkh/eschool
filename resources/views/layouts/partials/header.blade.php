@@ -6,6 +6,8 @@
 		<title>{{ config('app.name') }}</title>
 		<link rel="shortcut icon" href="/images/favicon.png">
 		<link href="/css/style.css" rel="stylesheet">
+		
+	<link rel="stylesheet" href="/css/custom.css">
 		<!--[if lt IE 9]>
 		<script src="js/html5shiv.js"></script>
 		<script src="js/respond.min.js"></script>
