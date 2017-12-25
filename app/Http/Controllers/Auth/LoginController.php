@@ -42,7 +42,6 @@ class LoginController extends Controller
     {
         $this->validateLogin($request);
 
-        dd($this->attemptLogin($request),$request->all());
 
         if ($this->attemptLogin($request)) {
             return $this->sendLoginResponse($request);
