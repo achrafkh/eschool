@@ -32,10 +32,10 @@ class User extends Authenticatable
     {
         return $this->belongsToMany(Course::class);
     }
-    public function setPasswordAttribute($value)
-    {
-        $this->attributes['password'] = Hash::make($value);
-    }
+    // public function setPasswordAttribute($value)
+    // {
+    //     $this->attributes['password'] = Hash::make($value);
+    // }
 
     public function isAdmin(){
 
